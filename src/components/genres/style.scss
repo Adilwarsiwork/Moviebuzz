@@ -1,0 +1,49 @@
+@import "../../mixins.scss";
+.genres {
+  display: flex;
+  gap: 5px;
+  top: 3.8rem;
+  .genre {
+    background-color: #f97b22;
+    padding: 4.4px 7px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    white-space: nowrap;
+    @include mddvs {
+      font-size: 16px;
+      border-radius: 5px;
+      top: 4rem;
+      color: white;
+      white-space: nowrap;
+    }
+    @include mdls {
+      font-size: 15px;
+    }
+    @include mddvh {
+      font-size: 13.25px;
+    }
+    @include mdsm {
+      font-size: 15px;
+    }
+    @include xs {
+      font-size: 12px;
+      border-radius: 5px;
+      top: 4rem;
+      color: white;
+      white-space: nowrap;
+    }
+  }
+  @include mdls {
+    position: relative;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+  @include xs {
+    position: relative;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

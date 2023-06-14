@@ -1,0 +1,112 @@
+@import "../../../mixins.scss";
+
+.heroBanner {
+  width: 100%;
+  height: 700px;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+
+  @include md {
+    height: 650px;
+  }
+  .backdrop-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 70px;
+    opacity: 0.9;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px 5px rgba(0, 0, 0, 0.3);
+    .lazy-load-image-background {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .opacity-layer {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .heroBannerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    .title {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      @include md {
+        margin-bottom: 0;
+        font-size: 90px;
+      }
+    }
+    .subTitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      @include md {
+        font-size: 24px;
+      }
+    }
+    .searchInput {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      input {
+        width: calc(100% - 100px);
+        height: 60px;
+        background-color: white;
+        outline: 0;
+        border: 0;
+        border-radius: 5px 0 0 5px;
+        padding: 0 15px;
+        font-family: "Rubik", sans-serif;
+
+        font-size: 14.5px;
+        @include md {
+          width: calc(100% - 150px);
+          height: 60px;
+          font-size: 20.5px;
+          padding: 0 30px;
+        }
+      }
+      button {
+        width: 100px;
+        height: 60px;
+        background: #0a4d68;
+        // background: var(--gradient);
+        color: white;
+        outline: 0;
+        border: 0;
+        border-radius: 0 5px 5px 0;
+        font-family: "Rubik", sans-serif;
+
+        font-size: 22.5px;
+        cursor: pointer;
+        @include md {
+          width: 150px;
+          height: 60px;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

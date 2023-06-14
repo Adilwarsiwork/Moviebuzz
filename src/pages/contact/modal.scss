@@ -1,0 +1,109 @@
+@import "../../mixins.scss";
+
+.modal-container {
+  width: 100vh;
+
+  top: 0;
+  left: 0;
+  position: relative;
+
+  .modalbox {
+    position: fixed;
+    background-color: #eee9e9;
+    border-radius: 5px;
+    z-index: 100;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 12.5px 2000px rgba(0, 0, 0, 0.45);
+    padding: 1rem;
+    @include mddv {
+      width: 320px;
+      height: 290px;
+    }
+    @include xs {
+      width: 270px;
+      height: 270px;
+    }
+    .message {
+      font-size: 32px;
+      font-family: "Rubik", sans-serif;
+
+      color: #0a4d68;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      @include mddv {
+        font-size: 28px;
+        padding: 12px;
+        margin-bottom: 0.35rem;
+      }
+      @include xs {
+        font-size: 24.5px;
+        padding: 8px;
+        margin-bottom: 1.15rem;
+      }
+    }
+    .button-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 0.8rem;
+      .gotohome {
+        font-size: 19px;
+        font-family: "Rubik", sans-serif;
+
+        background-color: #0a4d68;
+        color: #fff;
+        font-weight: 500;
+
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        letter-spacing: 1.18px;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+        @include mddv {
+          font-size: 17px;
+          padding: 10px;
+        }
+        @include xs {
+          font-size: 15px;
+          padding: 8px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .stayhere {
+        font-size: 19px;
+        font-weight: 500;
+        font-family: "Rubik", sans-serif;
+
+        color: #fff;
+        background-color: #0a4d68;
+
+        width: 200px;
+        height: 40px;
+        letter-spacing: 1.18px;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+
+        border-radius: 5px;
+        @include mddv {
+          font-size: 17px;
+          padding: 10px;
+        }
+        @include xs {
+          font-size: 15px;
+          padding: 8px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

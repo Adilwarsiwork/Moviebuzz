@@ -1,0 +1,357 @@
+@import "../../mixins.scss";
+
+.form-container {
+  max-width: 1600px;
+  height: auto;
+  margin: auto;
+  padding-top: 150px;
+  font-family: "Rubik", sans-serif;
+
+  @include mddv {
+    width: 100%;
+  }
+
+  h6 {
+    padding: 1rem;
+
+    color: #0a4d68;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  h4 {
+    font-size: 24px;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    color: #0a4d68;
+    font-weight: 600;
+    @include mddv {
+      font-size: 18px;
+    }
+  }
+  h2 {
+    color: #0a4d68;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 600;
+    @include mddv {
+      font-size: 3.4rem;
+    }
+  }
+  .form-subcontainer {
+    margin: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 80%;
+    @include mddv {
+      margin: 2.8rem;
+    }
+
+    .left {
+      max-width: 100%;
+      height: 50%;
+      background-color: rgb(229, 235, 238);
+      border-radius: 8px;
+      box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 2rem;
+      gap: 2rem;
+      @include mddv {
+        padding: 2.5rem 4rem;
+      }
+      @include smdv {
+        max-width: 470px;
+        width: 470px;
+        padding: 2rem 3rem;
+      }
+      @include xs {
+        width: 340px;
+        padding: 2rem 2.25rem;
+      }
+
+      .information-container {
+        margin: 0 33.34px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.28);
+        transition: all ease-in-out 0.34s;
+        @include mddv {
+          margin: 0 -1rem;
+        }
+
+        .information {
+          width: 100%;
+          height: 5.5rem;
+          background-color: #cacaca;
+          border-radius: 5px;
+          padding: 0.5rem 2rem;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+
+          @include xs {
+            padding: 0.5rem 1.2rem;
+            gap: 1.3rem;
+          }
+          .icon {
+            color: #0a4d68;
+            background-color: rgb(229, 235, 238);
+            padding: 0.62rem 0.62rem;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            font-size: 50px;
+            margin-right: 0.8rem;
+            transition: all ease-in-out 0.5s;
+            @include mddv {
+              padding: 6px 5px;
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              font-size: 30px;
+              margin-right: 0.5rem;
+            }
+            @include mddv {
+              margin-right: 0.2rem;
+            }
+            &:hover {
+              color: #e86a33;
+            }
+          }
+          .text-info {
+            font-size: 26px;
+            @include mddv {
+              font-size: 22px;
+            }
+            @include mddvh {
+              font-size: 19px;
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          box-shadow: 2px 2px 8px 4.5px rgba(0, 0, 0, 0.28);
+        }
+      }
+    }
+    .right {
+      max-width: 800px;
+      height: auto;
+      background-color: rgb(229, 235, 238);
+      border-radius: 5px;
+      box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.5);
+      font-family: "Rubik", sans-serif;
+
+      .form-container-sub {
+        .form-box {
+          max-width: 800px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 3rem;
+          font-family: "Rubik", sans-serif;
+
+          @include mdls {
+            max-width: 680px;
+            padding: 2.5rem;
+          }
+
+          @include mddv {
+            max-width: 600px;
+          }
+          @include mddvs {
+            width: 568px;
+          }
+          @include mddvh {
+            width: 525px;
+          }
+
+          @include smdv {
+            width: 470px;
+            gap: 1.8rem;
+            padding: 1.8rem 1rem;
+          }
+          @include xs {
+            width: 340px;
+          }
+          .form-inputs {
+            display: flex;
+            flex-direction: column;
+
+            gap: 2.8rem;
+            @include smdv {
+              gap: 2.5rem;
+            }
+            @include smdv {
+              gap: 2.2rem;
+            }
+            .waringMsg {
+              color: red;
+              font-size: 1.5rem;
+              margin-left: 2px;
+
+              padding: 0;
+              font-weight: 500;
+
+              @include mddv {
+                font-size: 1.25rem;
+              }
+
+              span {
+                letter-spacing: 0.5px;
+              }
+            }
+            .errormessage {
+              color: red;
+              font-size: 1.48rem;
+              margin-top: -35px;
+              margin-left: 1.2px;
+              padding: 0;
+              font-weight: 400;
+
+              align-self: start;
+
+              @include smdv {
+                font-size: 1.25rem;
+                margin-top: -26.5px;
+              }
+            }
+
+            input[type="submit"] {
+              width: 700px;
+              font-size: 1.7rem;
+              font-family: "Rubik", sans-serif;
+
+              height: 4rem;
+              font-weight: 500;
+              margin-top: 1.2rem;
+              border-radius: 5px;
+              box-shadow: 2px 2px 18px 2px rgba(0, 0, 0, 0.25);
+              background-color: #0a4d68;
+              color: #ffffff;
+              transition: all ease-in-out 0.25s;
+              letter-spacing: 1.18px;
+              @include mdls {
+                max-width: 550px;
+              }
+
+              @include mddv {
+                width: 500px;
+              }
+              @include mddvs {
+                width: 475px;
+              }
+              @include mddvh {
+                width: 450px;
+              }
+              @include smdv {
+                font-size: 1.32rem;
+                width: 412px;
+                gap: 1.5rem;
+              }
+              @include xs {
+                width: 305px;
+              }
+              &:hover {
+                cursor: pointer;
+                box-shadow: 2px 2px 16px 8px rgba(0, 0, 0, 0.3);
+              }
+            }
+            input[type="reset"] {
+              width: 700px;
+              font-family: "Rubik", sans-serif;
+
+              font-size: 1.7rem;
+              font-weight: 500;
+
+              height: 4rem;
+              border-radius: 5px;
+              box-shadow: 2px 2px 18px 2px rgba(0, 0, 0, 0.25);
+              background-color: #0a4d68;
+              letter-spacing: 1.18px;
+              color: #ffffff;
+              transition: all ease-in-out 0.25s;
+              @include mdls {
+                max-width: 550px;
+              }
+
+              @include mddv {
+                width: 500px;
+              }
+              @include mddvs {
+                width: 475px;
+              }
+              @include mddvh {
+                width: 450px;
+              }
+              @include smdv {
+                font-size: 1.32rem;
+                width: 412px;
+                gap: 1.5rem;
+              }
+              @include xs {
+                width: 305px;
+              }
+              &:hover {
+                cursor: pointer;
+                box-shadow: 2px 2px 16px 8px rgba(0, 0, 0, 0.3);
+              }
+            }
+            .inputs {
+              width: 705px;
+              height: 4.5rem;
+              padding: 0 1.8rem;
+              font-family: "Rubik", sans-serif;
+
+              font-size: 1.34rem;
+              border: 2px solid grey;
+              border-radius: 5px;
+              box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.25);
+              &:focus {
+                outline: none;
+
+                border: 2px solid rgb(15, 92, 123);
+              }
+              @include mdls {
+                max-width: 550px;
+              }
+
+              @include mddv {
+                width: 500px;
+              }
+              @include mddvs {
+                width: 475px;
+              }
+              @include mddvh {
+                width: 450px;
+              }
+
+              @include smdv {
+                width: 412px;
+                height: 3.5rem;
+                font-size: 1.2rem;
+              }
+              @include xs {
+                width: 305px;
+              }
+            }
+            #input-message {
+              padding: 1.25rem 1.8rem;
+              height: 10rem;
+            }
+          }
+        }
+      }
+    }
+    @include mddevice {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
