@@ -49,9 +49,12 @@ const Header = () => {
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
         <div className="logo" onClick={() => navigationHandler("/")}>
-          <span>CINEMAHUB</span>
+          <span>Moviebuzz</span>
         </div>
         <ul className="menuItems">
+          <li className="menuItem" onClick={() => navigationHandler("/")}>
+            Home
+          </li>
           <li
             className="menuItem"
             onClick={() => navigationHandler("/explore/movie")}
@@ -64,15 +67,16 @@ const Header = () => {
           >
             TV Shows
           </li>
-          <li
+          <a
+            href="https://adilwarsi.vercel.app/"
+            target="_blank"
             className="menuItem"
-            onClick={() => navigationHandler("/contact")}
+            // onClick={() => navigationHandler("/contact")}
           >
-            Contact
-          </li>
-
-          <li className="menuItem">
-            <FaSearch onClick={openSearch} id="searchicn" />
+            Contacts
+          </a>
+          <li className="menuItem" onClick={openSearch}>
+            <FaSearch id="searchicn" />
           </li>
         </ul>
 
@@ -94,7 +98,7 @@ const Header = () => {
             <div className="searchInput">
               <input
                 type="text"
-                placeholder="Search for a Movies or Tv Shows....."
+                placeholder="Search movies, tv shows or web series ..."
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyUp={searchQueryHandler}
               />

@@ -3,22 +3,23 @@
 .switchingTabs {
   height: 40px;
   background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
-  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.125);
+  padding: 6px;
   .tabItems {
     display: flex;
     align-items: center;
-    height: 30px;
+    height: 29px;
     position: relative;
     .tabItem {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 134px;
+      width: 100px;
       color: #0a4d68;
-      font-size: 18px;
+      font-size: 17px;
+      font-weight: 500;
       position: relative;
       z-index: 1;
       cursor: pointer;
@@ -27,25 +28,25 @@
         color: white;
       }
       @include mddv {
-        width: 115.5px;
+        // width: 116px;
       }
       @include xs {
       }
     }
     .movingBg {
       height: 30px;
-      width: 140px;
-      border-radius: 12px;
+      width: 96px;
+      border-radius: 4px;
       background-image: var(--gradient);
       position: absolute;
       left: 125px;
       transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
       @include mddv {
-        width: 100px;
+        width: 96px;
         left: 100px;
       }
       @include xs {
-        width: 98.5px;
+        width: 90px;
         left: 90px;
       }
     }

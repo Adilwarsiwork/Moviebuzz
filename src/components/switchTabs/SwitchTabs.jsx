@@ -6,26 +6,26 @@ import "./style.scss";
 const SwitchTabs = ({ data, onTabChange }) => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [left, setLeft] = useState(0);
-  const [widhtcount, setWidhtcount] = useState(window.screen.width);
+  const [widhtcount, setWidhtcount] = useState(window?.innerWidth);
 
   const currentScreenWidht = () => {
     setWidhtcount(() => {
-      window.innerWidth;
+      return window?.innerWidth;
     });
   };
 
-  // useEffect(() => {
-  //   window.addEventListener("resize", currentScreenWidht);
-  //   return () => {
-  //     window.removeEventListener("resize", currentScreenWidht);
-  //   };
-  // });
+  useEffect(() => {
+    window.addEventListener("resize", currentScreenWidht);
+    return () => {
+      window.removeEventListener("resize", currentScreenWidht);
+    };
+  });
 
   const activeTab = (tab, index) => {
     if (widhtcount <= 500) {
-      setLeft(index * 90);
+      setLeft(index * 96);
     } else {
-      setLeft(index * 125);
+      setLeft(index * 102);
     }
     // setLeft(index * 125);
     setTimeout(() => {
@@ -33,6 +33,10 @@ const SwitchTabs = ({ data, onTabChange }) => {
     }, 300);
     onTabChange(tab, index);
   };
+
+  // useEffect(() => {
+  //   activeTab();
+  // }, [widhtcount]);
 
   return (
     <div className="switchingTabs">

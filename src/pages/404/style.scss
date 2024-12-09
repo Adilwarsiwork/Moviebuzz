@@ -1,17 +1,24 @@
 .pageNotFound {
-    height: 700px;
-    padding-top: 200px;
-    .contentWrapper {
-        text-align: center;
-        color: var(--black-light);
-        display: flex;
-        flex-direction: column;
-        .bigText {
-            font-size: 150px;
-            font-weight: 700;
-        }
-        .smallText {
-            font-size: 44px;
-        }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contentWrapper {
+    text-align: center;
+    color: var(--black-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .bigText {
+      font-size: 64px;
+      font-weight: 700;
     }
+    .smallText {
+      font-size: 32px;
+    }
+  }
 }

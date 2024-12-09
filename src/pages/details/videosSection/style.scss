@@ -1,38 +1,46 @@
 @import "../../../mixins.scss";
 .videosSection {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
   .sectionHeading {
-    font-size: 24px;
+    font-size: 26px;
     color: #0a4d68;
-    margin-bottom: 25px;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    @include mddv {
+      font-size: 20px;
+    }
   }
   .videos {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     overflow-x: auto;
-    margin-right: -20px;
-    margin-left: -20px;
-    padding: 0 20px;
+    // margin-right: -20px;
+    // margin-left: -20px;
+    // padding: 0 20px;
     @include md {
-      gap: 20px;
+      gap: 12px;
       margin: 0;
       padding: 0;
     }
     .videoItem {
-      width: 150px;
+      width: 140px;
       flex-shrink: 0;
       @include md {
-        width: 25%;
+        width: 20%;
       }
       cursor: pointer;
       .videoThumbnail {
-        margin-bottom: 15px;
+        margin-bottom: 6px;
         position: relative;
         img {
           width: 100%;
           display: block;
-          border-radius: 12px;
+          border-radius: 6px;
           transition: all 0.7s ease-in-out;
         }
         svg {
@@ -74,11 +82,11 @@
       }
       .videoTitle {
         color: #0a4d68;
-        font-size: 16.2px;
-        line-height: 20px;
+        font-size: 16px;
+        // line-height: 20px;
         @include md {
           font-size: 16px;
-          line-height: 24px;
+          line-height: 20px;
         }
       }
     }
@@ -86,21 +94,21 @@
 
   .videoSkeleton {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     overflow-x: auto;
-    margin-right: -20px;
-    margin-left: -20px;
-    padding: 0 20px;
+    // margin-right: -20px;
+    // margin-left: -20px;
+    // padding: 0 20px;
     @include md {
-      gap: 20px;
+      gap: 12px;
       margin: 0;
       padding: 0;
     }
     .skItem {
-      width: 150px;
+      width: 140px;
       flex-shrink: 0;
       @include md {
-        width: 25%;
+        width: 20%;
       }
       .thumb {
         width: 100%;

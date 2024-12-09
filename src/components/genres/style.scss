@@ -1,18 +1,21 @@
 @import "../../mixins.scss";
 .genres {
   display: flex;
-  gap: 5px;
-  top: 3.8rem;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 4px;
+  top: 3.25rem;
   .genre {
-    background-color: #f97b22;
-    padding: 4.4px 7px;
-    font-size: 18px;
-    border-radius: 5px;
+    background-color: #e06d1c;
+    padding: 6px 8px;
+    font-size: 16px;
+    border-radius: 4px;
     color: white;
     white-space: nowrap;
+
     @include mddvs {
       font-size: 16px;
-      border-radius: 5px;
+      border-radius: 4px;
       top: 4rem;
       color: white;
       white-space: nowrap;
@@ -38,7 +41,7 @@
     position: relative;
     top: 0rem;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
   }
   @include xs {
     position: relative;

@@ -1,23 +1,39 @@
 @import "../../mixins.scss";
 .carouselSection {
   position: relative;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
   & > .contentWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+
+    @include md {
+      margin-bottom: 16px;
+    }
   }
+
   .carouselTitle {
-    font-size: 32px;
+    font-size: 26px;
+
     color: #0a4d68;
-    font-weight: 500;
+    font-weight: 600;
     @include mddv {
-      font-size: 26px;
+      font-size: 20px;
     }
   }
 }
 
 .banner {
-  margin-top: 6rem;
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  @include xs {
+    max-width: 90vh;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

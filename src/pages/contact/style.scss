@@ -5,7 +5,6 @@
   height: auto;
   margin: auto;
   padding-top: 150px;
-  font-family: "Rubik", sans-serif;
 
   @include mddv {
     width: 100%;
@@ -146,7 +145,6 @@
       background-color: rgb(229, 235, 238);
       border-radius: 5px;
       box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.5);
-      font-family: "Rubik", sans-serif;
 
       .form-container-sub {
         .form-box {
@@ -155,7 +153,6 @@
           flex-direction: column;
           align-items: center;
           padding: 3rem;
-          font-family: "Rubik", sans-serif;
 
           @include mdls {
             max-width: 680px;
@@ -226,7 +223,6 @@
             input[type="submit"] {
               width: 700px;
               font-size: 1.7rem;
-              font-family: "Rubik", sans-serif;
 
               height: 4rem;
               font-weight: 500;
@@ -265,7 +261,6 @@
             }
             input[type="reset"] {
               width: 700px;
-              font-family: "Rubik", sans-serif;
 
               font-size: 1.7rem;
               font-weight: 500;
@@ -307,7 +302,6 @@
               width: 705px;
               height: 4.5rem;
               padding: 0 1.8rem;
-              font-family: "Rubik", sans-serif;
 
               font-size: 1.34rem;
               border: 2px solid grey;

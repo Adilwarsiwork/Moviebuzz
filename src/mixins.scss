@@ -10,6 +10,12 @@
   }
 }
 
+@mixin mddvh840 {
+  @media only screen and (min-width: 840px) {
+    @content;
+  }
+}
+
 @mixin lg {
   @media only screen and (min-width: 1024px) {
     @content;
@@ -53,7 +59,7 @@
 }
 
 @mixin mdsm {
-  @media only screen and (max-width: 767.5px) {
+  @media only screen and (max-width: 767.9px) {
     @content;
   }
 }

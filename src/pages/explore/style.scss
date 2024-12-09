@@ -1,7 +1,15 @@
 @import "../../mixins.scss";
 .explorePage {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   min-height: 700px;
-  padding-top: 100px;
+  padding-top: 130px;
+  @include xs {
+    padding-top: 100px;
+  }
+
   .resultNotFound {
     font-size: 24px;
     color: var(--black-light);
@@ -9,23 +17,28 @@
   .pageHeader {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     flex-direction: column;
     @include md {
       flex-direction: row;
     }
   }
   .pageTitle {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 34px;
     color: #0a4d68;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-weight: 500;
     @include md {
       margin-bottom: 0;
     }
     @include mddv {
-      font-size: 26.8px;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    @include xs {
+      font-size: 22px;
+      margin-bottom: 8px;
     }
   }
   .filters {

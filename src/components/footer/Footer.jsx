@@ -13,20 +13,20 @@ const Footer = () => {
     <footer className="footer">
       <ContentWrapper>
         <div className="infoText">
-          This is a Cinemahub website where user can search for their favourite
-          Movies and Tv shows and they can find the details of shows like
-          Rating, Star Cast, Release Date, Director Name, Trailer and Posters
-          etc.
+          Moviebuzz is a platform where user can search for their favourite
+          Movies, Tv shows & Web seriers and they can find the details of that
+          shows like rating, star cast, release date, director name, poster and
+          also they can watch trailer of that.
         </div>
         <div className="contact">
-          <h4> &nbsp; Contact links.</h4>
+          <h4> &nbsp; Contacts</h4>
           <a
             title="Click to call on +919575726843"
             className="contact-details"
             href="tel:+919575726843"
             target="_blank"
           >
-            +919575726843
+            +91 9575726843
           </a>
           <a
             title="Click to send E-mail"
@@ -34,21 +34,18 @@ const Footer = () => {
             href="mailto:warsi.work@gmail.com"
             target="_blank"
           >
-            warsi.work@gmail.com
+            aadilwarsi.work@gmail.com
           </a>
           <br />
         </div>
         <div className="socialIcons">
           <span className="icon">
-            <a
-              href="https://instagram.com/aadilwarsi.in?igshid=ZGUzMzM3NWJiOQ=="
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/aadilwarsi.in" target="_blank">
               <FaInstagram />
             </a>
           </span>
           <span className="icon">
-            <a href="mailto:warsi.work@gmail.com" target="_blank">
+            <a href="mailto:aadilwarsi.work@gmail.com" target="_blank">
               <SiGmail />
             </a>
           </span>
@@ -73,12 +70,11 @@ const Footer = () => {
         </div>
         <hr className="hrline" />
         <div className="author">
-          This site is developed and maintain by ADIL WARSI.
-          <br />
+          {/* This site is developed and maintain by ADIL WARSI.
+          <br /> */}
           <h6>
-            <p>
-              All CopyRights <FaRegCopyright /> reserved to ADIL WARSI - 2023.
-            </p>
+            All copyrights <FaRegCopyright className="copyright-icon" />{" "}
+            reserved to ADIL WARSI - 2024.
           </h6>
         </div>
       </ContentWrapper>

@@ -2,12 +2,17 @@
 .detailsBanner {
   width: 100%;
   background-color: var(--black);
-  padding-top: 100px;
-  margin-bottom: 50px;
+  padding-top: 120px;
+  margin-bottom: 48px;
+  position: relative;
+  padding-bottom: 48px;
   @include md {
     margin-bottom: 0;
-    padding-top: 120px;
+    padding-top: 130px;
     min-height: 700px;
+  }
+  @include xs {
+    padding-top: 100px;
   }
   .backdrop-img {
     width: 100%;
@@ -42,18 +47,19 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 25px;
-    @include md {
-      gap: 50px;
+    gap: 24px;
+    @include mddvh840 {
+      gap: 28px;
       flex-direction: row;
     }
+
     .left {
       flex-shrink: 0;
       .posterImg {
         width: 100%;
         display: block;
         border-radius: 12px;
-        @include md {
+        @include mddvh840 {
           max-width: 350px;
         }
       }
@@ -83,23 +89,32 @@
         }
       }
       .genres {
-        margin-bottom: 25px;
-        flex-flow: row wrap;
+        margin-bottom: 24px;
+        // flex-flow: row wrap;
+        display: flex;
+        justify-content: flex-start;
+        max-width: fit-content;
+        column-gap: 8px;
+
+        // @include xs {
+        //   flex-direction: col;
+        // }
       }
       .overview {
-        margin-bottom: 25px;
+        margin-bottom: 24px;
         .heading {
-          font-size: 28px;
-          margin-bottom: 10px;
+          font-size: 24px;
+          margin-bottom: 8px;
           color: #0a4d68;
           font-weight: 550;
         }
         .description {
           line-height: 24px;
-          color: #f97b22;
-          font-size: 18px;
+          color: #e06d1c;
+          font-size: 16px;
           @include md {
             padding-right: 100px;
+            font-size: 18px;
           }
         }
       }
@@ -117,7 +132,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        color: #f97b22;
+        color: #e06d1c;
         cursor: pointer;
         svg {
           width: 60px;
@@ -132,12 +147,12 @@
         .triangle {
           stroke-dasharray: 240;
           stroke-dashoffset: 480;
-          stroke: #f97b22;
+          stroke: #e06d1c;
           transform: translateY(0);
           transition: all 0.7s ease-in-out;
         }
         .circle {
-          stroke: #f97b22;
+          stroke: #e06d1c;
           stroke-dasharray: 650;
           stroke-dashoffset: 1300;
           transition: all 0.5s ease-in-out;
@@ -161,29 +176,33 @@
       .row {
         display: flex;
         align-items: center;
-        gap: 25px;
-        margin-bottom: 25px;
+        gap: 16px;
+        margin-bottom: 24px;
       }
 
       .info {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 15px 0;
+        padding: 4px 0;
         display: flex;
         .infoItem {
-          margin-right: 10px;
+          margin-right: 16px;
           display: flex;
           flex-flow: row wrap;
         }
         .text {
-          font-size: 1.1rem;
-          margin-right: 10px;
+          font-size: 18px;
+          margin-right: 6px;
           opacity: 0.9;
           line-height: 24px;
-          color: #f97b22;
+          color: #e06d1c;
           &.bold {
             font-weight: 600;
             opacity: 1;
             color: #0a4d68;
+          }
+
+          @include xs {
+            font-size: 1rem;
           }
         }
       }

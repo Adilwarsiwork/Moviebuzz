@@ -29,7 +29,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 12px;
+      border-radius: 4px;
       overflow: hidden;
       img {
         width: 100%;
@@ -42,18 +42,20 @@
       width: 40px;
       height: 40px;
       position: relative;
-      top: 70px;
-      left: -8px;
+      top: 60px;
+      left: -10px;
       background-color: white;
       flex-shrink: 0;
       @include md {
-        width: 50px;
-        height: 50px;
+        top: 64px;
+        width: 46px;
+        height: 46px;
+        left: -10px;
       }
     }
     .genres {
       position: relative;
-      top: 3.75rem;
+      top: 3.25rem;
       @include mdls {
         position: relative;
         top: 4rem;
@@ -78,20 +80,21 @@
   .textBlock {
     display: flex;
     flex-direction: column;
-    margin-top: 68px;
+    margin-top: 56px;
     .title {
       color: #0a4d68;
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      // margin-bottom: 10px;
       line-height: 24px;
       @include ellipsis(1);
       @include md {
-        font-size: 25px;
+        font-size: 20px;
       }
     }
     .date {
+      margin-top: 4px;
       color: #0a4d68;
-      font-size: 18.5px;
+      font-size: 16px;
     }
   }
   &:hover {
