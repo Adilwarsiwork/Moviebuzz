@@ -1,23 +1,41 @@
 @import "../../mixins.scss";
 .searchResultsPage {
   min-height: 700px;
-  padding-top: 100px;
+  padding-top: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include xs {
+    padding-top: 90px;
+    min-height: 600px;
+  }
   .resultNotFound {
-    padding-top: 200px;
+    // padding-top: 200px;
 
     text-align: center;
     color: var(--black-light);
     display: flex;
     flex-direction: column;
 
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 600;
+
+    @include xs {
+      font-size: 26px;
+    }
   }
   .pageTitle {
     font-size: 28px;
     line-height: 40px;
     color: #0a4d68;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+    @include xs {
+      margin-bottom: 1rem;
+      font-size: 24px;
+    }
   }
   .content {
     display: flex;

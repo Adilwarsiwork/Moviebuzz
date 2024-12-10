@@ -80,7 +80,7 @@ const SearchResult = () => {
               </InfiniteScroll>
             </>
           ) : (
-            <span className="resultNotFound">Sorry, Results not found!</span>
+            <span className="resultNotFound">Sorry, No Result Found!</span>
           )}
         </ContentWrapper>
       )}

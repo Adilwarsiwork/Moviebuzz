@@ -5,13 +5,14 @@
   }
 
   min-height: 700px;
-  padding-top: 130px;
+  padding-top: 128px;
   @include xs {
-    padding-top: 100px;
+    padding-top: 96px;
   }
 
   .resultNotFound {
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 28px;
     color: var(--black-light);
   }
   .pageHeader {
